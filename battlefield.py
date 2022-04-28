@@ -60,7 +60,7 @@ class Battlefield:
 
     def show_dino_opponent_options(self):
         print('Select your dinosaur.')
-        index = 1 
+        index = 0 
         for dinosaur in self.herd.dinosaurs:
             print(f'Press {index} for {dinosaur.name} with {dinosaur.health} health')
             index += 1
@@ -68,7 +68,7 @@ class Battlefield:
 
     def show_robot_opponent_options(self):
         print('Select your robot.')
-        index = 1
+        index = 0
         for robot in self.fleet.robots:
             print(f'Press {index} for {robot.name} with {robot.health} health')
             index += 1
