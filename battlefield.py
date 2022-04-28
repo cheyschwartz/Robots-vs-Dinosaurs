@@ -39,6 +39,7 @@ class Battlefield:
             self.fleet.robots[robot_choice])
         if self.fleet.robots[robot_choice].health <= 0:
             print(f'Oh no! {self.fleet.robots[robot_choice].name} has died!')
+            print('')
             self.fleet.robots.remove(self.fleet.robots[robot_choice])
 
 
@@ -53,12 +54,13 @@ class Battlefield:
             self.herd.dinosaurs[dino_choice])
         if self.herd.dinosaurs[dino_choice].health <= 0:
             print(f'Oh no! {self.herd.dinosaurs[dino_choice].name} has died!')
+            print('')
             self.herd.dinosaurs.remove(self.herd.dinosaurs[dino_choice])
 
 
     def show_dino_opponent_options(self):
-        print('Select your robot.')
-        index = 0 
+        print('Select your dinosaur.')
+        index = 1 
         for dinosaur in self.herd.dinosaurs:
             print(f'Press {index} for {dinosaur.name} with {dinosaur.health} health')
             index += 1
@@ -66,9 +68,10 @@ class Battlefield:
 
     def show_robot_opponent_options(self):
         print('Select your robot.')
-        index = 0 
+        index = 1
         for robot in self.fleet.robots:
             print(f'Press {index} for {robot.name} with {robot.health} health')
+            index += 1
 
     def display_winners(self):
         if len(self.fleet.robots) > len(self.herd.dinosaurs):
